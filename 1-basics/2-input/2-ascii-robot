@@ -1,1 +1,8 @@
 
+# ask for eye character
+print("Please enter eye character")
+eye = input
+
+#display
+print("******")
+print("(", eye, eye, ")")

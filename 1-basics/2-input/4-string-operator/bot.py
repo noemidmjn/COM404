@@ -1,4 +1,4 @@
-
+#multiply strings
 print("Please enter the number of lives remaining:")
 lives = int(input())
 print("Please enter the energy level")

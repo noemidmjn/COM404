@@ -23,7 +23,7 @@ def grid():
     print((len(word)) * "*" * number)
     print(word  * number)
     print((len(word) ) * "*" * number)
-  
+  # i have to do the spacings and it's ok
 
 
 def run():

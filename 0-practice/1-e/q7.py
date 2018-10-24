@@ -15,6 +15,14 @@ def both():
   print((len(word)) * "*")
   print(word)
   print((len(word)) * "*")
+
+def grid():
+  print("Give me a whole number")
+  number = int(input())
+  for x in range(number):
+    print((len(word)) * "*" * number)
+    print(word  * number)
+    print((len(word) ) * "*" * number)
   
 
 
@@ -27,5 +35,7 @@ def run():
     over()
   elif (response == "both"):
     both()
+  elif (response == "grid"):
+    grid()
 
 run()

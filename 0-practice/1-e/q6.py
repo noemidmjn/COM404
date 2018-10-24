@@ -9,11 +9,12 @@ def isLeagueUnited(hero1, hero2):
 
 # second function
 def decidePlan(hero1, hero2):
-  isLeagueUnited(hero1, hero2)
-  if (isLeagueUnited == "True"):
+ 
+  if (isLeagueUnited == "Superman", "Wonder Woman" ):
     print("Time to save the world!")
   else:
     print("We must unite the league!")
+
 
 # third function
 def run():

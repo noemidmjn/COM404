@@ -3,17 +3,17 @@
 # first function
 def isLeagueUnited(hero1, hero2):
   if (hero1, hero2 == "Superman", "Wonder Woman"):
-    print("True")
+    return True
   else:
-    print("False")
+    return False
 
 # second function
 def decidePlan(hero1, hero2):
  
-  if (isLeagueUnited == "Superman", "Wonder Woman" ):
-    print("Time to save the world!")
+  if (isLeagueUnited(hero1, hero2) == True):
+    return "Time to save the world!"
   else:
-    print("We must unite the league!")
+    return "We must unite the league!"
 
 
 # third function
@@ -29,7 +29,7 @@ def run():
   response = str(input())
 
   if (response == "league"):
-    isLeagueUnited(hero1, hero2)
+    print (isLeagueUnited(hero1, hero2))
   elif (response == "plan"):
     decidePlan(hero1, hero2)
   else:

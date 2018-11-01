@@ -19,3 +19,33 @@ class Bot:
 
   def display_summary(self):
     print("{} is {} years old and weights {}kg".format(self.name, self.age, self.energy, self.shield))
+
+  def get_age(self):
+    return self.age
+
+  def get_energy(self):
+    return self.energy
+
+  def get_name(self):
+    return self.name
+
+  def get_shield(self):
+    return self.shield
+
+  def decrement_energy(self, amount):
+    self.energy = self.energy - amount
+
+  def decrement_shield(self, amount):
+    self.shield = self.shield - amount
+
+  def increment_age(self, amount):
+    self.age = self.age + amount
+
+  def increment_energy(self, amount):
+    self.energy = self.energy + amount
+
+  def increment_shield(self, amount):
+    self.shield = self.shield + amount
+
+  def set_name(self, name):
+    self.name = name

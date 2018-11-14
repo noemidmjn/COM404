@@ -1,4 +1,3 @@
-
 from tkinter import *
 
 
@@ -37,7 +36,7 @@ class Gui(Tk):
 
         self.add_instruction_label()
 
-        self.add_email_frame()
+        
 
         self.add_email_label()
 
@@ -79,11 +78,8 @@ class Gui(Tk):
 
 
 
-    def add_email_frame(self):
 
-        self.email_frame = Frame()
-
-        self.email_frame.pack()
+        
 
         
 
@@ -93,7 +89,7 @@ class Gui(Tk):
 
         self.instruction_label = Label()
 
-        self.instruction_label.pack()
+        self.instruction_label.grid(row=2, column=0, columnspan=4)
 
         self.instruction_label.configure(font="Arial 16",
 
@@ -105,9 +101,9 @@ class Gui(Tk):
 
     def add_email_label(self):
 
-        self.email_label = Label(self.email_frame)
+        self.email_label = Label()
 
-        self.email_label.pack(side=LEFT)
+        self.email_label.grid(row=3, column=0, columnspan=1)
 
         self.email_label.configure(font="Arial 16",
 
@@ -117,9 +113,9 @@ class Gui(Tk):
 
     def add_email_entry(self):
 
-        self.email_entry = Entry(self.email_frame)
+        self.email_entry = Entry()
 
-        self.email_entry.pack(side=RIGHT)
+        self.email_entry.grid(row=3, column=2, columnspan=1)
 
 
 
@@ -129,4 +125,4 @@ class Gui(Tk):
 
                                        text = "Subscribe")
 
-        self.subscribe_button.pack( side = BOTTOM)
+        self.subscribe_button.grid(row=4, column=0, columnspan=4)

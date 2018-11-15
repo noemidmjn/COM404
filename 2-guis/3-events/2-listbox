@@ -1,0 +1,110 @@
+from tkinter import *
+from tkinter import messagebox
+
+
+
+class Gui(Tk):
+
+
+
+    def __init__(self):
+
+
+        super().__init__()
+
+
+
+        self.title("Song Maker")
+
+
+
+        self.add_heading_label()
+
+        self.add_lyrictoadd_label()
+
+        self.add_lyrictoadd_entry()
+
+        self.add_lyrictoadd_button()
+
+        self.add_lyrics_label()
+
+        self.add_lyrics_listbox()
+
+        
+
+        
+    def add_heading_label(self):
+
+        
+
+        self.heading_label = Label()
+
+        self.heading_label.grid(row=0, column=0, columnspan=3)
+
+        self.heading_label.configure(font="Arial 24",
+
+                                     text="Song Maker")
+
+
+    def add_lyrictoadd_label(self):
+
+        self.lyrictoadd_label = Label()
+
+        self.lyrictoadd_label.grid(row=1, column=0, columnspan=1)
+
+        self.lyrictoadd_label.configure(font="Arial 16",
+
+                                         text="Lyric to add:")
+
+
+    def add_lyrictoadd_entry(self):
+
+        self.lyrictoadd_entry = Entry()
+
+        self.lyrictoadd_entry.grid(row=2, column=0, columnspan=2)
+
+
+    def add_lyrictoadd_button(self):
+
+            self.lyrictoadd_button = Button(font="Arial 16",
+
+                                           text = "Add")
+            
+
+            self.lyrictoadd_button.grid(row=2, column=3, columnspan=1)
+
+
+            self.lyrictoadd_button.bind("<ButtonRelease-1>", self.lyrictoadd_button_clicked)
+
+
+    def add_lyrics_label(self):
+
+        self.lyrics_label = Label()
+
+        self.lyrics_label.grid(row=3, column=0, columnspan=1)
+
+        self.lyrics_label.configure(font="Arial 16",
+
+                                   text="Lyrics:")
+
+
+
+    def add_lyrics_listbox(self):
+
+        self.lyrics_listbox = Listbox()
+
+        self.lyrics_listbox.grid(row=4, column=0, columnspan=3)
+
+
+
+    # event handlers
+
+     
+
+    def lyrictoadd_button_clicked(self, event):
+
+        lyric = self.lyrictoadd_entry.get()
+
+        self.lyrics_listbox.insert(END, lyric)
+        
+        

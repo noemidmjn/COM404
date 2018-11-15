@@ -89,7 +89,7 @@ class Gui(Tk):
 
         self.instruction_label = Label()
 
-        self.instruction_label.grid(row=2, column=0, columnspan=4)
+        self.instruction_label.grid(row=2, column=0, columnspan=2)
 
         self.instruction_label.configure(font="Arial 16",
 
@@ -115,7 +115,7 @@ class Gui(Tk):
 
         self.email_entry = Entry()
 
-        self.email_entry.grid(row=3, column=2, columnspan=1)
+        self.email_entry.grid(row=3, column=1, columnspan=1)
 
 
 
@@ -125,4 +125,4 @@ class Gui(Tk):
 
                                        text = "Subscribe")
 
-        self.subscribe_button.grid(row=4, column=0, columnspan=4)
+        self.subscribe_button.grid(row=4, column=0, columnspan=2)

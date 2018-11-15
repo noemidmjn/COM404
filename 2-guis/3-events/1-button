@@ -1,0 +1,138 @@
+from tkinter import *
+from tkinter import messagebox
+
+
+class Gui(Tk):
+
+
+
+    def __init__(self):
+
+
+
+        # initialise the parent class (Tk)
+
+        super().__init__()
+
+
+
+        # set wintow attributes
+
+        self.title("Newsletter")
+
+        self.configure(height=500,
+
+                       width=600)
+
+
+
+
+
+        # add components/widgets
+
+        
+
+        self.add_heading_label()
+
+        self.add_instruction_label()
+
+        
+
+        self.add_email_label()
+
+        self.add_email_entry()
+
+        self.add_subscribe_button()
+
+        
+
+        
+
+
+
+        
+
+    def add_heading_label(self):
+
+        
+
+        # 1. create the component
+
+        self.heading_label = Label()
+
+        self.heading_label.grid(row=0, column=0, columnspan=2)
+
+        # 2. style the component
+
+        self.heading_label.configure(font="Arial 24",
+
+                                     text="RECEIVE OUR NEWSLETTER",
+
+                                     )
+
+        # 3. add event listeners to the component
+
+        #todo
+
+
+
+
+
+
+        
+
+        
+
+
+
+    def add_instruction_label(self):
+
+        self.instruction_label = Label()
+
+        self.instruction_label.grid(row=2, column=0, columnspan=2)
+
+        self.instruction_label.configure(font="Arial 16",
+
+                                         text="Please enter your email below to receive our newsletter.")
+
+
+
+
+
+    def add_email_label(self):
+
+        self.email_label = Label()
+
+        self.email_label.grid(row=3, column=0, columnspan=1)
+
+        self.email_label.configure(font="Arial 16",
+
+                                   text="Email:")
+
+
+
+    def add_email_entry(self):
+
+        self.email_entry = Entry()
+
+        self.email_entry.grid(row=3, column=1, columnspan=1)
+
+
+
+    def add_subscribe_button(self):
+
+        self.subscribe_button = Button(font="Arial 16",
+
+                                       text = "Subscribe")
+        
+
+        self.subscribe_button.grid(row=4, column=0, columnspan=2)
+
+
+        self.subscribe_button.bind("<ButtonRelease-1>",
+        self.submit_button_clicked)
+        
+ 
+    def submit_button_clicked(self, event):
+        email = self.email_entry.get()
+        messagebox.showinfo("Subscribed!", "Your email {} has been added".format(email))

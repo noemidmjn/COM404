@@ -19,6 +19,7 @@ class Gui(Tk):
         self.add_title_label()
         self.add_name_label()
         self.add_passport_label()
+        self.add_nights_label()
 
         
 
@@ -39,12 +40,13 @@ class Gui(Tk):
         self.passport_label.grid(row=2, column=1, columnspan=2)
         self.passport_label.configure(font="Arial 16",
                                       text="Passport Number:")
+        
+     def add_nights_label(self):
+        self.nights_label = Label()
+        self.nights_label.grid(row=3, column=1, columnspan=2)
+        self.nights_label.configure(font="Arial 16",
+                                    text="No. of nights:")
 
-
-
-
-
- 
 
 
 # Create an object of the Gui class when this module is executed

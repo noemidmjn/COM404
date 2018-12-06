@@ -13,8 +13,8 @@ class AnimatedGui(Tk):
 
         
         # set window attributes
-        self.configure(height=500,
-                       width=500)
+        self.configure(height=400,
+                       width=900)
 
         # set animation attributes
         self.num_ticks = 0
@@ -22,9 +22,9 @@ class AnimatedGui(Tk):
 
         # pikachu image
         self.pikachu_x_pos = 0
-        self.pikachu_y_pos = 0
-        self.pikachu_x_change = 15
-        self.pikachu_y_change = 15
+        self.pikachu_y_pos = 300
+        self.pikachu_x_change = 10
+        self.pikachu_y_change = 10
 
         # add components
         self.add_pikachu_image_label()
@@ -46,24 +46,24 @@ class AnimatedGui(Tk):
 
                 # pikachu
             # check if hit right side
-            if (self.pikachu_x_pos >= 420):
+            if (self.pikachu_x_pos >= 900):
                 self.pikachu_x_change = -self.pikachu_x_change
-                self.pikachu_image_label.configure(image=self.pikachu_image)
+                self.pikachu_image_label.configure(image=self.pikachu2_image)
 
             # check if hit left side
             if (self.pikachu_x_pos <= 0):
                 self.pikachu_x_change = -self.pikachu_x_change
-                self.pikachu_image_label.configure(image=self.pikachu2_image)
+                self.pikachu_image_label.configure(image=self.pikachu_image)
 
             # check if hit bottom
-            if (self.pikachu_y_pos >= 250):
-                self.pikachu_y_change = -self.pikachu_x_change
-                self.pikachu_image_label.configure(image=self.pikachu2_image)
+            if (self.pikachu_y_pos <= 40):
+                self.pikachu_y_change = -self.pikachu_y_change
+                self.pikachu_image_label.configure(image=self.pikachu_image)
 
             # check if hit top
-            if (self.pikachu_y_pos <= 0):
-                self.pikachu_y_change = -self.pikachu_x_change
-                self.pikachu_image_label.configure(image=self.pikachu2_image)
+            if (self.pikachu_y_pos >= 400):
+                self.pikachu_y_change = -self.pikachu_y_change
+                self.pikachu_image_label.configure(image=self.pikachu_image)
 
 
 
@@ -74,7 +74,7 @@ class AnimatedGui(Tk):
         self.pikachu_image_label = Label()
         self.pikachu_image_label.place(x=self.pikachu_x_pos,
                                         y=self.pikachu_y_pos)
-        self.pikachu_image_label.configure(image=self.pikachu2_image)
+        self.pikachu_image_label.configure(image=self.pikachu_image)
 
 
     
